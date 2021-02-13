@@ -14,7 +14,13 @@ public class Arranjo {
     }
 
     public int maior() {
-        return 0;
+    	Integer bigger = a[0];
+
+        for(int i = 0; i < a.length; i++){
+            if(bigger < a[i]) bigger = a[i];
+        }
+        
+        return bigger;
     }
 
     public int soma() {
@@ -26,6 +32,7 @@ public class Arranjo {
     }
 
     public double repeticoes(int i) {
+    	
         return 0;
     }
 }
