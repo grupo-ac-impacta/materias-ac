@@ -31,8 +31,15 @@ public class Arranjo {
         return sum;
     }
 
-    public double repeticoes(int i) {
+    public int repeticoes(int i) {
+    	Integer acumulator = 0;
     	
-        return 0;
+    	for(int count = 0; count < a.length; count++) {
+    		if(a[count] == i) {
+    			acumulator++;
+    			}
+    	}
+    	
+        return acumulator;
     }
 }
