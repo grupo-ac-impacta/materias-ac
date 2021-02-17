@@ -1,7 +1,7 @@
 package services;
 
 public class Arranjo {
-    Integer[] a = {940, 880, 830, 790, 750, 660, 650, 590, 510, 440};
+    Integer[] a = {940, 880, 830, 790, 750, 660, 650, 590, 510, 940};
 
     public int menor() {
         Integer smaller = this.soma();
