@@ -1,4 +1,5 @@
 package subAc1;
+//import java.util.ArrayList;
 
 public class RecursiveMethods {
 	public static String toString(int[] arr) {
@@ -10,6 +11,12 @@ public class RecursiveMethods {
 
 		return result + "]";
 	}
+
+//	public static int[] stringToArr(String arr) {
+//		String[] arrString = arr.split(",");
+//		int index = 0;
+//		arrString.toArray().remove(i);
+//	}
 
 	public static int recursiveFactorial(int n) {
 		if (n == 0) // caso base
@@ -67,7 +74,15 @@ public class RecursiveMethods {
 	}
 
 	// k: int
-	/*
-	 * public static int linearFib(int[] k) { if (k[0] <= 1) return [k, 0]; }
-	 */
+	public static int[] linearFib(int k) {
+		if (k <= 1) {
+			int[] arr = { k, 0 };
+			return arr;
+		}
+
+		int[] arr = linearFib(k - 1);
+		int[] rs = { arr[0] + arr[1], arr[0] };
+		return rs;
+	}
+
 }

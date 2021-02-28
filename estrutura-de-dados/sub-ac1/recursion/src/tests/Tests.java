@@ -1,5 +1,6 @@
 package tests;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
@@ -43,4 +44,11 @@ class Tests {
 	void binaryFibTest() {
 		assertEquals(34, RecursiveMethods.binaryFib(9), "Should give as return 34");
 	}
+
+	@Test
+	void linearFibTest() {
+		int[] expectedArray = { 5, 3 };
+		assertArrayEquals(expectedArray, RecursiveMethods.linearFib(5), "Should give as return { 5, 3 }");
+	}
+
 }
