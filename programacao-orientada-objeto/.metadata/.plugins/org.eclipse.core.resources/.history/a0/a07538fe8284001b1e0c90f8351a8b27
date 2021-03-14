@@ -1,0 +1,8 @@
+package pilhaLSE;
+
+@SuppressWarnings("serial")
+public class QuantityDelimitersException extends RuntimeException {
+	public EmptyStackException(String err) {
+		super(err);
+	}
+}

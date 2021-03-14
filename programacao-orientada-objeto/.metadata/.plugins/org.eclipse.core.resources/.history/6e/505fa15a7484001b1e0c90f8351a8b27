@@ -1,0 +1,20 @@
+package pilhaLSE;
+
+import java.util.Arrays;
+
+public class Exercicios {
+	public String verificarDelimitadoresExpressaoMatematica(String expressao) {
+		final NodeStack<Character> del = new NodeStack<Character>();
+		
+		for (int i = 0; i < expressao.length(); i++) {
+			Character ch = expressao.charAt(i);
+            Character[] possibilities = {'[', '{', '(', ')', '}', ']'};
+            
+			if(Arrays.asList(possibilities).contains(ch)) del.push(ch);
+        }
+		
+		String result = del.toString();
+		
+		return result.substring(1).substring(0, result.length() - 1);;
+	}
+}

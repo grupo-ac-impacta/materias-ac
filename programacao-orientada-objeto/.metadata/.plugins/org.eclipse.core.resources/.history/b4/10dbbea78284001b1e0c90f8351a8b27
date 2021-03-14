@@ -1,0 +1,46 @@
+package pilhaLSE;
+
+import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Exercicios {
+	public int checkOccurrences(char toFind, String str) {
+		String p = String.format("[^\\%s]*\\%s", toFind, toFind);
+		
+		Pattern pattern = Pattern.compile(p);
+		Matcher matcher = pattern.matcher(str);
+		int count = 0;
+		while (matcher.find()) {
+		    count++;
+		}
+		
+		return count;
+	}
+	
+	public String checkDelimitersMathExpression(String expressao) {
+		final NodeStack<Character> del = new NodeStack<Character>();
+		Character[] possibilities = {'[', '{', '(', ')', '}', ']'};
+		int[] possibilitiesQtd = {0, 0, 0, 0, 0, 0}; // quantidade de cada delimitador na string
+		int qtdDelimiters
+		
+		for (int i = 0; i < possibilities.length; i++) {
+			possibilitiesQtd[i] = checkOccurrences(possibilities[i], expressao);
+		}
+		
+		System.out.println(Arrays.toString(possibilitiesQtd));
+		
+		for (int i = 0; i < expressao.length(); i++) {
+			Character ch = expressao.charAt(i);
+			 
+			if(Arrays.asList(possibilities).contains(ch)) {
+				del.push(ch);
+			}
+        }
+		
+		del.reverseStack();
+		String result = del.toString();
+		
+		return result;
+	}
+}

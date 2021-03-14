@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;index&apos; to &apos;Index&apos;&#x0D;&#x0A;- Original project: &apos;ac1-poo&apos;&#x0D;&#x0A;- Original element: &apos;index&apos;&#x0D;&#x0A;- Renamed element: &apos;Index&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;index&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{index.java[index" matchStrategy="1" name="Index" qualified="false" references="true" similarDeclarations="false" stamp="1615666829618" textual="false" version="1.0"/>
+</session>

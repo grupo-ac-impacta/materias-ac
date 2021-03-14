@@ -1,0 +1,11 @@
+
+public class Index {
+	
+	public static char[][] initialize( ) {
+		char[][] board = {{'F', 'F', 'F'}, {'F', 'F', 'F'}, {'F', 'F', 'F'}};
+		
+		return board;
+	}
+		
+	
+}

@@ -1,0 +1,33 @@
+import java.util.Iterator;
+
+public class Index {
+	
+	public static char[][] initialize( ) {
+		char[][] board = {{'F', 'F', 'F'}, {'F', 'F', 'F'}, {'F', 'F', 'F'}};
+		
+		return board;
+	}
+		
+	public static int status (char M[][]) {
+		Integer[][] patterns = {
+                {0, 1, 2},
+                {0, 4, 8},
+                {0, 3, 6},
+                {1, 4, 7},
+                {2, 5, 8},
+                {2, 4, 6},
+                {3, 4, 5},
+                {6, 7, 8}};
+		
+		int winner = 0;
+		for (Integer[] pattern: patterns) {
+			boolean hasWinner = M[pattern[0]] != null 
+	                && M[pattern[0]].equals(M[pattern[1]]) 
+	                && M[pattern[0]].equals(M[pattern[2]]);
+			
+			if(hasWinner && pattern[0] == 'O' && winner == 0) return winner = 1;
+			if(hasWinner && pattern[0] == 'X' && winner == 0) return winner = 2;
+		}
+
+	}
+}

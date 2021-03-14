@@ -1,0 +1,7 @@
+package pilhaLSE;
+
+public class Exercicios {
+	public String verificarDelimitadoresExpressaoMatematica(String expressai) {
+		
+	}
+}
