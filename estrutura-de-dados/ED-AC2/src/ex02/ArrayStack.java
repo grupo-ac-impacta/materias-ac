@@ -1,4 +1,4 @@
-package tadPilhaString;
+package ex02;
 
 public class ArrayStack<E> implements Stack<E> {
 

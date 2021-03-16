@@ -1,4 +1,4 @@
-package tadListaArranjo;
+package ex01;
 
 //Uma interface para lista de arranjo
 

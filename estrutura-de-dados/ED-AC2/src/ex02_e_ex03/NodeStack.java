@@ -1,4 +1,4 @@
-package tadPilhaLSE;
+package ex02_e_ex03;
 import java.util.*; 
 
 public class NodeStack<E> implements Stack<E> {

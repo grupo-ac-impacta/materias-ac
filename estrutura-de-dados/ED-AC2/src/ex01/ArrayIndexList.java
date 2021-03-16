@@ -1,4 +1,4 @@
-package tadListaArranjo;
+package ex01;
 
 // Implementação de uma lista encadeada usando um arranjo cujo tamanho
 // é duplicado quando o tamanho da lista indexada excede a capacidade do arranjo./

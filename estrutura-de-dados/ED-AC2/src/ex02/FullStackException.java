@@ -1,4 +1,4 @@
-package tadPilhaString;
+package ex02;
 
 @SuppressWarnings("serial")
 public class FullStackException extends RuntimeException {

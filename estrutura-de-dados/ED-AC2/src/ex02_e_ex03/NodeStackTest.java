@@ -1,4 +1,4 @@
-package tadPilhaLSE;
+package ex02_e_ex03;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
