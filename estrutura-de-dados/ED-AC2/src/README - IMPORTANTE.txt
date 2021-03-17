@@ -30,4 +30,7 @@ EX11 - https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-da
 
 EX12 - https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC2/src/ex11_e_ex12
 
-EX13 - 
+EX13 - Basta verificar a posição do nodo depois do Header e o nodo antes do Trailer: exemplo
+Nodo depois do header = p1
+Nodo antes do trailer = p5
+Em seguida verificar se a posição p é maior ou igual a p1 e menor ou igual a p5, caso verdadeiro a posição pertence à lista, caso contrário é lançada a exceção: InvalidPositionException
