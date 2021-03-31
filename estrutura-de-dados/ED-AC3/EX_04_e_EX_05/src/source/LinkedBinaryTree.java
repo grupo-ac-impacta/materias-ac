@@ -1,6 +1,8 @@
 package source;
 
 import java.util.Iterator;
+
+
 import exceptions.BoundaryViolationException;
 import exceptions.EmptyTreeException;
 import exceptions.InvalidPositionException;
@@ -158,6 +160,18 @@ public void inorderPositions(Position<E> root2, PositionList<Position<E>> positi
 		return ww;
 	}
 
+	//Insere o filho da direita em um nodo.
+	public Position<E> insertRight(Position<E> v, E e) throws InvalidPositionException {
+		BTPosition<E> vv = checkPosition(v);
+		Position<E> RightPos = (Position<E>) vv.getRight();
+		if (RightPos != null)
+			throw new InvalidPositionException("Node already has a left child");
+		BTPosition<E> ww = createNode(e, vv, null, null);
+		vv.setRight(ww);
+		size++;
+		return ww;
+	}
+	
 //Remove um nodo com zero ou um filho.
 	public E remove(Position<E> v) throws InvalidPositionException {
 		BTPosition<E> vv = checkPosition(v);
@@ -229,7 +243,34 @@ public void inorderPositions(Position<E> root2, PositionList<Position<E>> positi
 	}
 	
 	protected void buildExpression(String E) {
-		s = ArrayStack<E> 
+		ArrayStack<BTPosition> S = new ArrayStack<BTPosition>();
+		int n = E.length();
+		for(int i = 0; i == n-1; i++) {
+			if(E[i] != "(" || E[i] !=  ")" ) {
+				LinkedBinaryTree<Integer> tree = new LinkedBinaryTree<Integer>();
+				tree.addRoot(E[i]);
+				S.push(tree);
+				
+			}
+			else if(E[i] == "(") {
+				;
+				
+			}
+			else {
+				LinkedBinaryTree<Integer> tree = new LinkedBinaryTree<Integer>();
+				BTPosition<String> primeiro = S.pop();
+				BTPosition<String> segundo = S.pop();
+				BTPosition<String> terceiro = S.pop();
+				
+				root = tree.addRoot(segundo);
+				tree.attach(root, terceiro, primeiro);
+				S.push(tree);
+
+			}
+		
+		}
+		return S.pop();
+		
 	}
 	
 // b) binaryPreorder conforme slide 31.
@@ -265,21 +306,25 @@ public void inorderPositions(Position<E> root2, PositionList<Position<E>> positi
 		}
 	}
 	
-// e) inorder conforme slide 43.
-	public String inorder(Tree<E> T, Position<E> v) {
-		if (hasLeft(v)) {
-			inorder(T,v.left());
+	
+	//  e) inorder conforme slide 43.
+	public String inorder(String T, BTPosition<E> v) {
+		if (hasLeft(v) && v.getLeft().element() != null) {
+			T = inorder(T,v.getLeft());
 		}
-		v.element();
-		if (hasRight(v)) {
-			inorder(T,v.right());
+		T +=  v.element() + ", ";
+		if (hasRight(v) && v.getRight().element() != null) {
+			T = inorder(T,v.getRight());
 		}
+		return T;
 	}
-// f) makerBTSearch e exiba o seu caminhamento inorder conforme slide 45.
 	
-// g) Método que desenhe a árvore binária de expressão conforme slide 47.
+	// g) Método que desenhe a árvore binária de expressão conforme slide 47.
 	
-// h) eulerTour conforme slide 51.
+	// h) eulerTour conforme slide 51.
+	public void eulerTour(String T, BTPosition<E> v) {
+		
+	}
 	
 	public boolean isEmpty() {
 		return (size == 0);

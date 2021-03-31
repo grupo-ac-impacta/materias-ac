@@ -1,5 +1,7 @@
 package stack;
 
+import source.LinkedBinaryTree;
+
 public class ArrayStack<E> implements Stack<E> {
 
 	protected int capacity; // capacidade real do arranjo da pilha
@@ -28,10 +30,10 @@ public class ArrayStack<E> implements Stack<E> {
 		return (top < 0);
 	}
 
-	public void push(E element) throws FullStackException {
+	public void push(LinkedBinaryTree<Integer> tree) throws FullStackException {
 		if (size() == capacity)
 			throw new FullStackException("Stack is full.");
-		S[++top] = element;
+		S[++top] = tree;
 	}
 
 	public E top() throws EmptyStackException {
