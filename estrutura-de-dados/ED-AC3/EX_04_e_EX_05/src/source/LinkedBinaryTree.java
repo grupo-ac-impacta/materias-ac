@@ -9,6 +9,7 @@ import interfaces.Position;
 import tad_lista_de_nodos.NodePositionList;
 import stack.ArrayStack;
 import interfaces.PositionList;
+import interfaces.Tree;
 
 // * Implementação da interface BinaryTree usando uma estrutura encadeada.
 public class LinkedBinaryTree<E> implements BinaryTree<E> {
@@ -226,7 +227,60 @@ public void inorderPositions(Position<E> root2, PositionList<Position<E>> positi
 		if (hasRight(v))
 			preorderPositions(right(v), pos); // recursão sobre o filho da direita
 	}
-
+	
+	protected void buildExpression(String E) {
+		s = ArrayStack<E> 
+	}
+	
+// b) binaryPreorder conforme slide 31.
+	public String binaryPreorder(Tree<E> T, Position<E> v) {
+		T += v.element();
+		if(hasLeft(v)) {
+			T += binaryPreorder(T,v.left());}
+		if(hasRight(v)) {
+			T += binaryPreorder(T,v.right());}
+		return T;
+	}
+	
+// c) binaryPostorder conforme slide 32.
+	public String binaryPostorder(Tree<E> T, Position<E> v) {
+		if(hasLeft(v)) {
+			T += binaryPreorder(T,v.left());}
+		if(hasRight(v)) {
+			T += binaryPreorder(T,v.right());}
+		T += v.element();
+		return T;
+	}
+	
+// d) evaluateExpression conforme slide 34 a 42.
+	public String evaluateExpression(Tree<E> T, Position<E> v) {
+		if (isInternal(v)){
+			String o = v.element();
+			String x = evaluateExpression(T,T.left(v));
+			String y = evaluateExpression(T,T.right(v));
+			return x, o, y;
+			}
+		else {
+			return v.element();
+		}
+	}
+	
+// e) inorder conforme slide 43.
+	public String inorder(Tree<E> T, Position<E> v) {
+		if (hasLeft(v)) {
+			inorder(T,v.left());
+		}
+		v.element();
+		if (hasRight(v)) {
+			inorder(T,v.right());
+		}
+	}
+// f) makerBTSearch e exiba o seu caminhamento inorder conforme slide 45.
+	
+// g) Método que desenhe a árvore binária de expressão conforme slide 47.
+	
+// h) eulerTour conforme slide 51.
+	
 	public boolean isEmpty() {
 		return (size == 0);
 	}
