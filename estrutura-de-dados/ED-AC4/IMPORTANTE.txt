@@ -1,0 +1,61 @@
+AC 04 - ESTRUTURA DE DADOS
+
+-------------------------------------------
+
+INTEGRANTES:
+
+• Leandro Damasceno de Lima | RA: 1902792
+• Luiz Henrique de Oliveira Contri | RA: 1903312
+• Danyllo Henrique Verri Santana | RA: 1601298
+• Matheus Nascimento Rodrigues | RA: 1902805
+
+-------------------------------------------
+
+1. https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_01
+
+2. ?
+
+3. ?
+
+4. O elemento com a maior chave é armazenado no nó raiz.*
+
+5. Não, porque é uma arvore binaria completa e o novo valor inserido vai ser menor que o pai, quebrando a regra do heap.
+
+6. Não se considera, pois down-heap bubbling utiliza do menor filho para fazer a comparação
+
+7.  https://github.com/grupo-ac-impacta/materias-ac/blob/main/estrutura-de-dados/ED-AC4/EX_07
+
+8.  https://github.com/grupo-ac-impacta/materias-ac/blob/main/estrutura-de-dados/ED-AC4/EX_08
+
+9.  https://github.com/grupo-ac-impacta/materias-ac/blob/main/estrutura-de-dados/ED-AC4/EX_09
+
+10.  https://github.com/grupo-ac-impacta/materias-ac/blob/main/estrutura-de-dados/ED-AC4/EX_10
+ 
+11. 1° DELETO (16, X);
+    2° ALOCO (8, W) NO LUGAR DE (16, X);
+    3° FAÇO HEAP ENTRE (8, W) E (15, K);
+    FIM
+
+12. https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_12*
+
+13. https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_13*
+
+14. Endereçamento aberto suporta fator de carga superior à 1 e o MAD não.
+
+15. Deslocamento cíclico com shift de 5 bits.
+
+16.  https://github.com/grupo-ac-impacta/materias-ac/blob/main/estrutura-de-dados/ED-AC4/EX_16
+
+17.  https://github.com/grupo-ac-impacta/materias-ac/blob/main/estrutura-de-dados/ED-AC4/EX_17
+
+18.  https://github.com/grupo-ac-impacta/materias-ac/blob/main/estrutura-de-dados/ED-AC4/EX_18
+
+19.  https://github.com/grupo-ac-impacta/materias-ac/blob/main/estrutura-de-dados/ED-AC4/EX_19
+
+20.
+
+21. A principal diferença entre o TAD Mapa e o TAD Dicionário é que no TAD Mapa as chaves devem ser únicas. Já no TAD Dicionário é permitido chaves duplicadas, como se fosse um dicionário de palavras, onde temos palavras repetidas, mas com descrições diferentes.
+
+22. https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_22
+
+23.
