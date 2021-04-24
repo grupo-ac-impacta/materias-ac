@@ -1,0 +1,160 @@
+package TADListaNodes;
+
+import java.util.Iterator;
+
+import Exceptions.EmptyPriorityQueueException;
+import Exceptions.FullPriorityQueueException;
+import Exceptions.InvalidKeyException;
+import Interface.Position;
+import Interface.PositionList;
+
+public class NodePositionList<E> implements PositionList<E> {
+	protected int numElts; // Número de elementos na lista
+	protected DNode<E> header, trailer; // Sentinelas especiais
+
+// Construtor que cria uma lista vazia
+	public NodePositionList() {
+		numElts = 0;
+		header = new DNode<E>(null, null, null); // cria a cabeça
+		trailer = new DNode<E>(header, null, null); // cria a cauda
+		header.setNext(trailer); // faz a cabeça e a cauda apontarem uma para a outra
+	}
+
+// Verifica se a posição é válida para esta lista e a converte para DNode se for válida
+	protected DNode<E> checkPosition(Position<E> p) throws InvalidKeyException {
+		if (p == null)
+			throw new InvalidKeyException();
+		if (p == header)
+			throw new InvalidKeyException();
+		if (p == trailer)
+			throw new InvalidKeyException();
+		try {
+			DNode<E> temp = (DNode<E>) p;
+			if ((temp.getPrev() == null) || (temp.getNext() == null))
+				throw new InvalidKeyException();
+			return temp;
+		} catch (ClassCastException e) {
+			throw new InvalidKeyException();
+		}
+	}
+
+// Retorna a quantidade de elementos na lista
+	public int size() {
+		return numElts;
+	}
+
+// Retorna quando a lista esta vazia
+	public boolean isEmpty() {
+		return (numElts == 0);
+	}
+
+//Retorna a primeira posição da lista
+	public Position<E> first() throws EmptyPriorityQueueException {
+		if (isEmpty())
+			throw new EmptyPriorityQueueException();
+		return header.getNext();
+	}
+
+//Retorna a posição que antecede a fornecida
+	public Position<E> prev(Position<E> p) throws InvalidKeyException, FullPriorityQueueException {
+		DNode<E> v = checkPosition(p);
+		DNode<E> prev = v.getPrev();
+		if (prev == header)
+			throw new FullPriorityQueueException();
+		return prev;
+	}
+
+//Insere o elemento antes da posição fornecida, retornando a nova posição
+	public void addBefore(Position<E> p, E element) throws InvalidKeyException {
+		DNode<E> v = checkPosition(p);
+		numElts++;
+		DNode<E> newNode = new DNode<E>(v.getPrev(), v, element);
+		v.getPrev().setNext(newNode);
+		v.setPrev(newNode);
+	}
+
+//Insere o elemento dado no início da lista, retornando a nova posição
+	public void addFirst(E element) {
+		numElts++;
+		DNode<E> newNode = new DNode<E>(header, header.getNext(), element);
+		header.getNext().setPrev(newNode);
+		header.setNext(newNode);
+	}
+
+//Remove da lista a posição fornecida
+	public E remove(Position<E> p) throws InvalidKeyException {
+		DNode<E> v = checkPosition(p);
+		numElts--;
+		DNode<E> vPrev = v.getPrev();
+		DNode<E> vNext = v.getNext();
+		vPrev.setNext(vNext);
+		vNext.setPrev(vPrev);
+		E vElem = v.element();
+		// Desconecta a posição da lista e marca-a como inválida
+		v.setNext(null);
+		v.setPrev(null);
+		return vElem;
+	}
+
+//Substitui o elemento da posição fornecida por um novo e retorna o elemento velho
+	public E set(Position<E> p, E element) throws InvalidKeyException {
+		DNode<E> v = checkPosition(p);
+		E oldElt = v.element();
+		v.setElement(element);
+		return oldElt;
+	}
+
+//Retorna o último nodo da lista.
+	public Position<E> last() {
+		if (isEmpty())
+			throw new EmptyPriorityQueueException();
+		return trailer.getPrev();
+	}
+
+//Retorna o nodo que segue um dado nodo da lista.
+	public Position<E> next(Position<E> p) throws InvalidKeyException, FullPriorityQueueException {
+		DNode<E> v = checkPosition(p);
+		DNode<E> next = v.getNext();
+		if (next == trailer)
+			throw new FullPriorityQueueException();
+		return next;
+	}
+
+//Insere um elemento na última posição, retornando uma posição nova.
+	public void addLast(E e) {
+		numElts++;
+		DNode<E> newNode = new DNode<E>(trailer.getPrev(), trailer, e);
+		trailer.getPrev().setNext(newNode);
+		trailer.setPrev(newNode);
+	}
+
+//Insere um elemento após um dado elemento da lista.
+	public void addAfter(Position<E> p, E e) throws InvalidKeyException {
+		DNode<E> v = checkPosition(p);
+		numElts++;
+		DNode<E> newNode = new DNode<E>(v, v.getNext(), e);
+		v.getNext().setPrev(newNode);
+		v.setNext(newNode);
+	}
+
+//Retorna a representação textual de uma lista de nodos
+	public static <E> String toString(PositionList<E> l) {
+		String s = "";
+		for (E i : l) {
+			s += ", " + i;
+//			System.out.println(i);
+		}
+		s = (s.length() == 0 ? s : s.substring(2));
+		return "[" + s + "]";
+	}
+
+//Retorna o iterator a partir do ElemenIterator.
+	public Iterator<E> iterator() {
+		return new ElementIterator<E>(this);
+	}
+
+	public String toString() {
+		return toString(this);
+	}
+
+}
