@@ -11,13 +11,16 @@ INTEGRANTES:
 
 -------------------------------------------
 
-1. https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_01
+1. 
+ a) https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_1a
+ b) https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_1b
+ c) https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_1c
 
 2. ?
 
 3. ?
 
-4. O elemento com a maior chave é armazenado no nó raiz.*
+4. O elemento com a maior chave é armazenado no nó raiz ou no nível mais baixo e mais a direita
 
 5. Não, porque é uma arvore binaria completa e o novo valor inserido vai ser menor que o pai, quebrando a regra do heap.
 
@@ -36,9 +39,9 @@ INTEGRANTES:
     3° FAÇO HEAP ENTRE (8, W) E (15, K);
     FIM
 
-12. https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_12*
+12. https://github.com/grupo-ac-impacta/materias-ac/blob/main/estrutura-de-dados/ED-AC4/EX_12.PNG
 
-13. https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_13*
+13. https://github.com/grupo-ac-impacta/materias-ac/blob/main/estrutura-de-dados/ED-AC4/EX_13.PNG
 
 14. Endereçamento aberto suporta fator de carga superior à 1 e o MAD não.
 
