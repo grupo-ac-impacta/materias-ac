@@ -16,7 +16,7 @@ INTEGRANTES:
  b) https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_1b
  c) https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_1c
 
-2. ?
+2. https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC4/EX_02
 
 3. ?
 
