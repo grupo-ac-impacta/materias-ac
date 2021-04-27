@@ -56,6 +56,17 @@ INTEGRANTES:
 19.  https://github.com/grupo-ac-impacta/materias-ac/blob/main/estrutura-de-dados/ED-AC4/EX_19
 
 20.
+ Entrada: um par chave-valor(k,v)
+ para cada posição em S.positions() faça
+  valor_hash <- p.element().getValue % S.length
+  se S[valor_hash] = -1 então
+   S[valor_hash] <- P.element().getValue
+  senão
+   para cada posição em S.positions() faça
+    new_value <- (valor_hash + p * p) % s.length
+   se S[new_value] = -1 então
+    S[new_value] <- p.element().getValue
+    break
 
 21. A principal diferença entre o TAD Mapa e o TAD Dicionário é que no TAD Mapa as chaves devem ser únicas. Já no TAD Dicionário é permitido chaves duplicadas, como se fosse um dicionário de palavras, onde temos palavras repetidas, mas com descrições diferentes.
 
