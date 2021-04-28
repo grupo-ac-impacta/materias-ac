@@ -1,0 +1,2 @@
+Usaria a estrutura de Filas de Prioridades. Porque posso utilizar o elemento com prioridade mais alta para ser removido a qualquer
+momento, facilitando a remoção do evento com menor time-stamp.
