@@ -14,14 +14,18 @@ public class Index {
 
 		while(optionSelected != 0) {
 			listOptions();
-			System.out.print("Digite: ");
 			
+			System.out.println("Digite: ");
 			optionSelected = s.nextInt();
 
 			switch (optionSelected) {
 				case 1:
 					TAD_lista_arranjo.Index listaArranjo = new TAD_lista_arranjo.Index();
 					listaArranjo.init();
+					continue;
+				case 2:
+					TAD_dicionario.Index dicionario = new TAD_dicionario.Index();
+					dicionario.init();
 					continue;
 				default:
 					System.out.println("Valor inválido");
@@ -33,7 +37,8 @@ public class Index {
 	public static void listOptions() {
 		System.out.println("==================== Lista de Interfaces =====================");
 		System.out.println("• Digite '0' para sair");
-		System.out.println("• Digite '1' para acessar a interface de lista de Arranjo");
+		System.out.println("• Digite '1' para acessar a interface da lista de Arranjo");
+		System.out.println("• Digite '2' para acessar a interface do Dicionário");
 		System.out.println("==============================================================");
 	}
 }
