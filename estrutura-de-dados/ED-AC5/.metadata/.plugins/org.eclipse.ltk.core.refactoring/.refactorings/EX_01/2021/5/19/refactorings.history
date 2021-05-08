@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 3 elements to &apos;EX_01/src/source&apos;&#x0D;&#x0A;- Original project: &apos;EX_01&apos;&#x0D;&#x0A;- Destination element: &apos;EX_01/src/source&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     MultiMap.java&#x0D;&#x0A;     HashTableMultiMap.java&#x0D;&#x0A;     Tests.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;source" element1="/src&lt;{MultiMap.java" element2="/src&lt;{HashTableMultiMap.java" element3="/src&lt;{Tests.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1620505297782" units="3" version="1.0"/>
+</session>

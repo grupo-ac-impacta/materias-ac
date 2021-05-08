@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\Projects\college\materias-ac\estrutura-de-dados\ED-AC5\.metadata\.plugins\org.eclipse.jdt.core
+609589157.index
+1413440298.index
+3176973855.index
