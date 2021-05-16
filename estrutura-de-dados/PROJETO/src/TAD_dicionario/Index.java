@@ -3,6 +3,8 @@ package TAD_dicionario;
 import java.util.Map;
 import java.util.Scanner;
 
+import TAD_dicionario.source.HashTableMultiMap;
+
 public class Index {
 	
 	public void init() {

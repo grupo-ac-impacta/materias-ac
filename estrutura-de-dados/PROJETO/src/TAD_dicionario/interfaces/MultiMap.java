@@ -1,4 +1,4 @@
-package TAD_dicionario;
+package TAD_dicionario.interfaces;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package TAD_lista_de_nodos;
+package TAD_lista_de_nodos.source;
 import exceptions.InvalidPositionException;
 import interfaces.Position;
 

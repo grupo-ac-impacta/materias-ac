@@ -1,5 +1,6 @@
-package TAD_lista_arranjo;
+package TAD_lista_arranjo.source;
 
+import TAD_lista_arranjo.interfaces.IndexList;
 import exceptions.IndexOutOfBoundsException;
 
 public class ArrayIndexList<E> implements IndexList<E> {

@@ -2,12 +2,11 @@ package TAD_arvore_binaria.source;
 
 import java.util.Iterator;
 
-import TAD_lista_de_nodos.NodePositionList;
+import TAD_lista_de_nodos.source.NodePositionList;
 import exceptions.BoundaryViolationException;
 import exceptions.EmptyTreeException;
 import exceptions.InvalidPositionException;
 import exceptions.NonEmptyTreeException;
-import interfaces.BTNode;
 import interfaces.BTPosition;
 import interfaces.BinaryTree;
 import interfaces.Position;
@@ -30,31 +29,31 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 		checkPosition(v);
 		return (hasLeft(v) || hasRight(v));
 	}
-	
+
 	public boolean isRoot(Position<E> v) throws InvalidPositionException {
 		checkPosition(v);
 		return (v == root());
 	}
-	
+
 	public boolean hasLeft(Position<E> v) throws InvalidPositionException {
 		BTPosition<E> vv = checkPosition(v);
 		return (vv.getLeft() != null);
 	}
-	
+
 	public Position<E> root() throws EmptyTreeException {
 		if (root == null)
 			throw new EmptyTreeException("The tree is empty");
-		
+
 		return root;
 	}
 
 	public Position<E> left(Position<E> v) throws InvalidPositionException, BoundaryViolationException {
 		BTPosition<E> vv = checkPosition(v);
 		Position<E> leftPos = (Position<E>) vv.getLeft();
-		
+
 		if (leftPos == null)
 			throw new BoundaryViolationException("No left child");
-		
+
 		return leftPos;
 	}
 
@@ -93,7 +92,7 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 	public void inorderPositions(Position<E> root2, PositionList<Position<E>> positions) {
 		// FAZER
 	}
-	
+
 	public Iterable<Position<E>> positions() {
 		PositionList<Position<E>> positions = (PositionList<Position<E>>) new NodePositionList<Position<E>>();
 
@@ -166,11 +165,22 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 		return ww;
 	}
 
+	public Position<E> insertRight(Position<E> v, E e) throws InvalidPositionException {
+		BTPosition<E> vv = checkPosition(v);
+		Position<E> RightPos = (Position<E>) vv.getRight();
+		if (RightPos != null)
+			throw new InvalidPositionException("Node already has a left child");
+		BTPosition<E> ww = createNode(e, vv, null, null);
+		vv.setRight(ww);
+		size++;
+		return ww;
+	}
+
 	public E remove(Position<E> v) throws InvalidPositionException {
 		BTPosition<E> vv = checkPosition(v);
 		BTPosition<E> leftPos = vv.getLeft();
 		BTPosition<E> rightPos = vv.getRight();
-		
+
 		if (leftPos != null && rightPos != null)
 			throw new InvalidPositionException("Cannot remove node with two children");
 
@@ -196,7 +206,7 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 				uu.setLeft(ww);
 			else
 				uu.setRight(ww);
-			
+
 			if (ww != null)
 				ww.setParent(uu);
 		}
@@ -230,7 +240,7 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 
 		return (BTPosition<E>) v;
 	}
-	
+
 	protected BTPosition<E> createNode(E element, BTPosition<E> parent, BTPosition<E> left, BTPosition<E> right) {
 		return new BTNode<E>(element, parent, left, right);
 	}
@@ -265,7 +275,7 @@ public class LinkedBinaryTree<E> implements BinaryTree<E> {
 
 	public boolean hasRight(Position<E> v) throws InvalidPositionException {
 		BTPosition<E> vv = checkPosition(v);
-		
+
 		return (vv.getRight() != null);
 	}
 }

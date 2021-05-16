@@ -1,4 +1,4 @@
-package TAD_lista_arranjo;
+package TAD_lista_arranjo.interfaces;
 
 //Uma interface para lista de arranjo
 

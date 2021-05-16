@@ -3,7 +3,7 @@ package TAD_Mapa;
 import java.util.Scanner;
 
 import TAD_Mapa.Map;
-import commons.Entry;
+import interfaces.Entry;
 
 public class Index {
 	

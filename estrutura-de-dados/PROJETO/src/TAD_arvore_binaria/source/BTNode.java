@@ -1,4 +1,6 @@
-package interfaces;
+package TAD_arvore_binaria.source;
+
+import interfaces.BTPosition;
 
 public class BTNode<E> implements BTPosition<E> {
 	private E element;
@@ -9,7 +11,10 @@ public class BTNode<E> implements BTPosition<E> {
 		setParent(parent);
 		setLeft(left);
 		setRight(right);
-
+	}
+	
+	public BTNode() {
+		
 	}
 
 	public E element() {

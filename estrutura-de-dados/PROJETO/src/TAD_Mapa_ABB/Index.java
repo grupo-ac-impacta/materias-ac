@@ -1,7 +1,7 @@
 package TAD_Mapa_ABB;
 
 import java.util.Scanner;
-import source.BinarySearchTree;
+import TAD_Mapa_ABB.BinarySearchTree;
 
 public class Index {
 	

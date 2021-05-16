@@ -1,12 +1,12 @@
 package TAD_Mapa;
 
-import commons.Entry;
+import interfaces.Entry;
 
 import exceptions.InvalidKeyException;
 
-import tad_lista_de_nodos.NodePositionList;
+import TAD_lista_de_nodos.source.NodePositionList;
 
-import commons.PositionList;
+import interfaces.PositionList;
 
 // Uma tabela hash que usa o teste linear função hash MAD. Uma estrutura de dados da tabela hash que
 

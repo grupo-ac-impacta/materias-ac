@@ -46,7 +46,7 @@ public class Index {
 					k = s.nextInt();
 					System.out.println("Digite o valor: ");
 					v = s.next();
-//					System.out.println(D.put(k, v).toString());
+					System.out.println(D.put(k, v).toString());
 				} catch (Exception e) {
 					System.out.println("Exceção: método PUT do dicionário: " + e);
 				}

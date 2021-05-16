@@ -1,6 +1,6 @@
 package TAD_Mapa;
 
-import commons.Entry;
+import interfaces.Entry;
 
 import exceptions.InvalidKeyException;
 

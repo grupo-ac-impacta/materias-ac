@@ -1,4 +1,4 @@
-package TAD_dicionario;
+package TAD_dicionario.source;
 
 import java.util.AbstractMap;
 
@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 import java.util.Map;
+
+import TAD_dicionario.interfaces.MultiMap;
 
 public class HashTableMultiMap<K, V> implements MultiMap<K, V> {
 

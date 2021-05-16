@@ -2,6 +2,8 @@ package TAD_lista_arranjo;
 
 import java.util.Scanner;
 
+import TAD_lista_arranjo.source.ArrayIndexList;
+
 public class Index {
 	
 	public void init() {
