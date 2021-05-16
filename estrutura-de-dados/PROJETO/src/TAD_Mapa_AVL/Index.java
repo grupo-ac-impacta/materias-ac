@@ -33,7 +33,7 @@ public class Index {
 					System.out.println("\n O método put(key, value) é utilizado para adicionar valores ao Mapa-ABB. \n "
 							+ "É necessário informar uma chave seguido de um valor. \n "
 							+ "Neste exemplo utilizaremos a Chave como Integer e o valor como String. \n "
-							+ "Considerando um Mapa-ABB *abb*, a chamada do método ficará assim: abb.put(5, \"Leandro\"). \n "
+							+ "Considerando um Mapa-ABB *abb*, a chamada do método ficará assim: avl.put(5, \"Leandro\"). \n "
 							+ "O método retornará o elemento inserido após a execução. \n");
 					continue;
 				case 3:
@@ -48,8 +48,8 @@ public class Index {
 					}
 					continue;
 				case 4:
-					System.out.println("\n O método remove(element) é utilizado para remover um elemento (chave: valor) do Mapa-ABB. \n "
-							+ "Considerando um Mapa-ABB *abb*, a chamada do método ficará assim: abb.remove(abb.get(key)). \n "
+					System.out.println("\n O método remove(element) é utilizado para remover um elemento (chave: valor) do Mapa-AVL. \n "
+							+ "Considerando um Mapa-AVL *avl*, a chamada do método ficará assim: avl.remove(avl.get(key)). \n "
 							+ "Retornará o elemento caso exista, senão retornará NULL \n");
 					continue;
 				case 5:
@@ -65,10 +65,10 @@ public class Index {
 					continue;
 				case 6:
 					System.out.println("\n O método get(key) é utilizado para resgatar o valor de uma determinada chave"
-							+ " presente no Mapa-ABB\n "
+							+ " presente no Mapa-AVL\n "
 							+ "É necessário informar uma chave. \n "
 							+ "Neste exemplo utilizaremos a Chave como Integer. \n "
-							+ "Considerando um Mapa-ABB *abb*, a chamada do método ficará assim: abb.get(5). \n "
+							+ "Considerando um Mapa-AVL *avl*, a chamada do método ficará assim: avl.get(5). \n "
 							+ "O método retornará o elemento após a execução. Caso o elemento não exista, retornará NULL \n");
 					continue;
 				case 7:
@@ -83,8 +83,8 @@ public class Index {
 					}
 					continue;
 				case 8:
-					System.out.println("\n O método keySet() é utilizado para retornar uma coleção iteravel de todas as chaves armazenadas no Mapa-ABB. \n "
-							+ "Considerando um Mapa-ABB *abb*, a chamada do método ficará assim: abb.keySet(). \n "
+					System.out.println("\n O método keySet() é utilizado para retornar uma coleção iteravel de todas as chaves armazenadas no Mapa-AVL. \n "
+							+ "Considerando um Mapa-AVL *avl*, a chamada do método ficará assim: avl.keySet(). \n "
 							+ "Retornará um iterator das chaves, senão retornará NULL \n");  
 					continue;
 				case 9:
@@ -98,7 +98,7 @@ public class Index {
 					continue;
 				case 10:	
 					System.out.println("\n O método values() é utilizado para retornar todos os valores associados com as chaves. \n "
-							+ "Considerando um Mapa-ABB *abb*, a chamada do método ficará assim: abb.values(). \n "
+							+ "Considerando um Mapa-AVL *avl*, a chamada do método ficará assim: AVL.values(). \n "
 							+ "Retornará um iterator com os valores, senão retornará NUMM \n");
 					continue;
 				case 11:
