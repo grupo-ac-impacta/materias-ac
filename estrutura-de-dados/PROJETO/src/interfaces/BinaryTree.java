@@ -1,9 +1,7 @@
-package TAD_arvore_binaria.interfaces;
+package interfaces;
 
 import exceptions.BoundaryViolationException;
 import exceptions.InvalidPositionException;
-import interfaces.Position;
-import interfaces.Tree;
 
 public interface BinaryTree<E> extends Tree<E> {
 

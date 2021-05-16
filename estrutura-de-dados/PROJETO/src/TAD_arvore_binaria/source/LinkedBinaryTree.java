@@ -2,14 +2,16 @@ package TAD_arvore_binaria.source;
 
 import java.util.Iterator;
 
-import TAD_arvore_binaria.interfaces.BinaryTree;
 import TAD_lista_de_nodos.NodePositionList;
-import TAD_lista_de_nodos.PositionList;
 import exceptions.BoundaryViolationException;
 import exceptions.EmptyTreeException;
 import exceptions.InvalidPositionException;
 import exceptions.NonEmptyTreeException;
+import interfaces.BTNode;
+import interfaces.BTPosition;
+import interfaces.BinaryTree;
 import interfaces.Position;
+import interfaces.PositionList;
 
 public class LinkedBinaryTree<E> implements BinaryTree<E> {
 	protected BTPosition<E> root;

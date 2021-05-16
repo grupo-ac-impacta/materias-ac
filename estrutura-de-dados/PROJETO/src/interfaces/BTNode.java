@@ -1,4 +1,4 @@
-package TAD_arvore_binaria.source;
+package interfaces;
 
 public class BTNode<E> implements BTPosition<E> {
 	private E element;

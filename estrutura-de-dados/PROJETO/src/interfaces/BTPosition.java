@@ -1,6 +1,4 @@
-package TAD_arvore_binaria.source;
-
-import interfaces.Position;
+package interfaces;
 
 public interface BTPosition<E> extends Position<E> {
 
