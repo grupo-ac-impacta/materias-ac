@@ -112,7 +112,7 @@ public class Index {
 						if(ld != null) { System.out.println(ld.toString()); }
 						else { System.out.println("null"); }
 					} catch (Exception e) {
-						System.out.println("Exceção: método entrySet do dicionário: " + e);
+						System.out.println("Exceção: método entrySet do mapa: " + e);
 					}
 					continue;
 				case 14:
