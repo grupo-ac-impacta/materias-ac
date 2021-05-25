@@ -43,6 +43,10 @@ public class Index {
 					TAD_arvore_binaria.Index binaryTree = new TAD_arvore_binaria.Index();
 					binaryTree.init();
 					continue;
+				case 7:
+					TAD_Pilha.Index stack = new TAD_Pilha.Index();
+					stack.init();
+					continue;
 				default:
 					System.out.println("Valor inválido");
 					continue;
@@ -59,6 +63,7 @@ public class Index {
 		System.out.println("• Digite '4' para acessar a interface do Mapa - ABB");
 		System.out.println("• Digite '5' para acessar a interface do Mapa - AVL");
 		System.out.println("• Digite '6' para acessar a interface da Árvore Binária");
+		System.out.println("• Digite '7' para acessar a interface da Pilha");
 		System.out.println("==============================================================");
 	}
 }
