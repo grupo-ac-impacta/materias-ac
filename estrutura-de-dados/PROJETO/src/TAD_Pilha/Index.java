@@ -44,7 +44,7 @@ public class Index {
 					continue;
 				case 4:
 					System.out.println("\n O método isEmpty retornará um valor booleano, True se a pilha é vazia \n"
-							+"\n e False se a listá não é vazia");
+							+"\n e False se a pilha não é vazia");
 					continue;
 				case 5:
 					try {

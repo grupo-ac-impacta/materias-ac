@@ -47,6 +47,10 @@ public class Index {
 					TAD_Pilha.Index stack = new TAD_Pilha.Index();
 					stack.init();
 					continue;
+				case 8:
+					TAD_Queue.index queue = new TAD_Queue.index();
+					queue.init();
+					continue;
 				default:
 					System.out.println("Valor inválido");
 					continue;
@@ -64,6 +68,7 @@ public class Index {
 		System.out.println("• Digite '5' para acessar a interface do Mapa - AVL");
 		System.out.println("• Digite '6' para acessar a interface da Árvore Binária");
 		System.out.println("• Digite '7' para acessar a interface da Pilha");
+		System.out.println("• Digite '8' para acessar a interface da Fila");
 		System.out.println("==============================================================");
 	}
 }
