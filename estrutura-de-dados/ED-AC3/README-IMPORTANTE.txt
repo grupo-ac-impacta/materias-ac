@@ -19,6 +19,7 @@ h) 4
 https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC3/EX_02_e_EX03
 
 - Ex 04 e Ex 05
+https://github.com/grupo-ac-impacta/materias-ac/tree/main/estrutura-de-dados/ED-AC3/EX_04_e_EX_05
 
 - Ex 06
 https://github.com/grupo-ac-impacta/materias-ac/blob/main/estrutura-de-dados/ED-AC3/Ex06.png
