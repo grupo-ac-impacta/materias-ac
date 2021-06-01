@@ -19,6 +19,10 @@ public class Index {
 			optionSelected = s.nextInt();
 
 			switch (optionSelected) {
+				case 0:
+					System.out.println("Fim!");
+					System.exit(0);
+				break;
 				case 1:
 					TAD_lista_arranjo.Index listaArranjo = new TAD_lista_arranjo.Index();
 					listaArranjo.init();
