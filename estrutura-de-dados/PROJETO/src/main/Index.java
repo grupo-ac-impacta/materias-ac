@@ -19,6 +19,10 @@ public class Index {
 			optionSelected = s.nextInt();
 
 			switch (optionSelected) {
+				case 0:
+					System.out.println("Fim!");
+					System.exit(0);
+				break;
 				case 1:
 					TAD_lista_arranjo.Index listaArranjo = new TAD_lista_arranjo.Index();
 					listaArranjo.init();
@@ -51,6 +55,10 @@ public class Index {
 					TAD_Queue.index queue = new TAD_Queue.index();
 					queue.init();
 					continue;
+				case 9:
+					TAD_grafo.Index grafo = new TAD_grafo.Index();
+					grafo.init();
+					continue;
 				default:
 					System.out.println("Valor inválido");
 					continue;
@@ -69,6 +77,7 @@ public class Index {
 		System.out.println("• Digite '6' para acessar a interface da Árvore Binária");
 		System.out.println("• Digite '7' para acessar a interface da Pilha");
 		System.out.println("• Digite '8' para acessar a interface da Fila");
+		System.out.println("• Digite '9' para acessar a interface do Grafo");
 		System.out.println("==============================================================");
 	}
 }

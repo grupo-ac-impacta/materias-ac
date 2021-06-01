@@ -57,10 +57,10 @@ public class Index {
 						i = s.nextInt();
 						System.out.println("Digite o valor");
 						v = s.nextInt();
-						System.out.println(A.get(i));						
+						System.out.println(A.set(i, v));						
 						A.set(i, v);
 					} catch (Exception e) {
-						System.out.println("Exceção: método PUT da Lista de Arranjo: " + e);
+						System.out.println("Exceção: método SET da Lista de Arranjo: " + e);
 					}
 					continue;
 				case 6:
