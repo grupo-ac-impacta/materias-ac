@@ -59,6 +59,10 @@ public class Index {
 					TAD_grafo.Index grafo = new TAD_grafo.Index();
 					grafo.init();
 					continue;
+				case 10:
+					TAD_lista_de_nodos.Index nodeList = new TAD_lista_de_nodos.Index();
+					nodeList.init();
+					continue;
 				default:
 					System.out.println("Valor inválido");
 					continue;
@@ -78,6 +82,7 @@ public class Index {
 		System.out.println("• Digite '7' para acessar a interface da Pilha");
 		System.out.println("• Digite '8' para acessar a interface da Fila");
 		System.out.println("• Digite '9' para acessar a interface do Grafo");
+		System.out.println("• Digite '10' para acessar a interface do Lista de Nodos");
 		System.out.println("==============================================================");
 	}
 }
