@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="estrutura-de-dados/ac1/ac1-estruturas-de-dados/src"/>
+	<classpathentry kind="src" path="estrutura-de-dados/ED-AC2/src"/>
+	<classpathentry kind="src" path="estrutura-de-dados/sub-ac1/recursion/src"/>
+	<classpathentry kind="output" path="estrutura-de-dados/ac1/ac1-estruturas-de-dados/bin"/>
+</classpath>
