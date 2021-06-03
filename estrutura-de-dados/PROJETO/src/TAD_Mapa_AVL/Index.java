@@ -99,7 +99,7 @@ public class Index {
 				case 10:	
 					System.out.println("\n O método values() é utilizado para retornar todos os valores associados com as chaves. \n "
 							+ "Considerando um Mapa-AVL *avl*, a chamada do método ficará assim: AVL.values(). \n "
-							+ "Retornará um iterator com os valores, senão retornará NUMM \n");
+							+ "Retornará um iterator com os valores, senão retornará NULL \n");
 					continue;
 				case 11:
 					try {
