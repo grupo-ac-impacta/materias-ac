@@ -33,8 +33,8 @@ public class Index {
 				case 2:
 					System.out.println("\n O método put(key, value) é utilizado para adicionar valores ao Mapa-ABB. \n "
 							+ "É necessário informar uma chave seguido de um valor. \n "
-							+ "Neste exemplo utilizaremos a Chave como Integer e o valor como String. \n "
-							+ "Considerando um Mapa-ABB *abb*, a chamada do método ficará assim: abb.put(5, \"Leandro\"). \n "
+							+ "Neste exemplo utilizaremos a Chave como Integer e o valor como Integer. \n "
+							+ "Considerando um Mapa-ABB *abb*, a chamada do método ficará assim: abb.put(5, 2). \n "
 							+ "O método retornará o elemento inserido após a execução. \n");
 					continue;
 				case 3:
@@ -43,7 +43,7 @@ public class Index {
 						k = s.nextInt();
 						System.out.println("Digite o valor: ");
 						v = s.nextInt();
-						System.out.println(ABB.put(k, v).toString());
+						System.out.println(ABB.put(k, v));
 					} catch (Exception e) {
 						System.out.println("Exceção: método PUT do mapa: " + e);
 					}
