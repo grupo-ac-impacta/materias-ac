@@ -88,7 +88,6 @@ public class index {
 					continue;
 			}
 		}
-		s.close();
 	}
 	
 	public static void listOptions() {
