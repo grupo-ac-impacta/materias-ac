@@ -44,7 +44,7 @@ public class Index {
 						k = s.nextInt();
 						System.out.println("Digite o valor: ");
 						v = s.next();
-						System.out.println(mapa.put(k, v).toString());
+						System.out.println(mapa.put(k, v));
 					} catch (Exception e) {
 						System.out.println("Exceção: método PUT do mapa: " + e);
 					}
