@@ -63,6 +63,10 @@ public class Index {
 					TAD_lista_de_nodos.Index nodeList = new TAD_lista_de_nodos.Index();
 					nodeList.init();
 					continue;
+				case 11:
+					TAD_fila_de_prioridade.index priorityList = new TAD_fila_de_prioridade.index();
+					priorityList.init();
+					continue;
 				default:
 					System.out.println("Valor inválido");
 					continue;
@@ -83,6 +87,7 @@ public class Index {
 		System.out.println("• Digite '8' para acessar a interface da Fila");
 		System.out.println("• Digite '9' para acessar a interface do Grafo");
 		System.out.println("• Digite '10' para acessar a interface do Lista de Nodos");
+		System.out.println("• Digite '11' para acessar a interface do Fila de Prioridade");
 		System.out.println("==============================================================");
 	}
 }
