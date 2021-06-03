@@ -101,7 +101,6 @@ public class Index {
 					continue;
 			}
 		}
-		s.close();
 	}
 	
 	public static void listOptions() {
