@@ -121,7 +121,7 @@ public class Index {
 	public static void listOptions() {
 		System.out.println("==================== Mapa-ABB =====================");
 		System.out.println("• Digite '0' para voltar");
-		System.out.println("• Digite '1' para entender a estrutura de dados Mapa");
+		System.out.println("• Digite '1' para entender a estrutura de dados Mapa-ABB");
 		System.out.println("• Digite '2' para entender o método put(key, value)");
 		System.out.println("• Digite '3' para executar o método put(key, value)");
 		System.out.println("• Digite '4' para entender o método remove(element)");
